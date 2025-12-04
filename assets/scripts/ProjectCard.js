@@ -26,7 +26,7 @@ class ProjectCard extends HTMLElement {
       const picture = shadow.querySelector('picture');
       const image = shadow.querySelector('.card__image');
       image.src = project.imageUrl;
-      image.alt = project.imageAlt;
+      image.alt = project.imageAlt || `Preview image for ${project.title}`;
 
       picture.querySelectorAll('source').forEach(source => source.remove());
 
