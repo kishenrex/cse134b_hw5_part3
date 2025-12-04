@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#0d6efd">
     <title>Contact Me</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" href="/assets/images/favicon.ico">
@@ -129,5 +131,17 @@
             <a href="https://www.linkedin.com/in/kishen-thevandran-441424251">LinkedIn</a>
         </div>
     </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+    </script>
 </body>
 </html>

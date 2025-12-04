@@ -60,11 +60,11 @@ function seedLocalStorage() {
         title: "Nightly - Sleep Tracking App",
         description: "A progressive web application designed to help users track their sleep patterns and improve sleep quality. Built with React and Tailwind.",
         link: "https://github.com/kishenrex/nightly",
-        imageUrl: "../assets/images/nightly_sample.png",
+        imageUrl: "./assets/images/nightly_sample.png",
         imageAlt: "A preview of the Nightly sleep tracking application dashboard.",
         imageSources: [
           {
-            "srcset": "../assets/images/nightly_sample.png",
+            "srcset": "./assets/images/nightly_sample.png",
             "type": "image/png"
           }
         ]
@@ -73,11 +73,11 @@ function seedLocalStorage() {
         title: "AME at UCSD website",
         description: "The main club website for the Anime and Manga Enthusiasts at UC San Diego. It contains the link to their Discord and historical facts about the club.",
         link: "https://ameatucsd.org/",
-        imageUrl: "/assets/images/ame_website.png",
+        imageUrl: "assets/images/ame_website.png",
         imageAlt: "Screenshot of the AME website homepage",
         imageSources: [
           {
-            "srcset": "/assets/images/ame_website.png",
+            "srcset": "assets/images/ame_website.png",
             "type": "image/png"
           }
         ]
