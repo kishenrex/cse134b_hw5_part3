@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Projects</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <style>
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .admin-form {
+            display: grid;
+            gap: 1rem;
+            background-color: var(--bg-color-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .admin-form label {
+            font-weight: bold;
+            margin-bottom: -0.5rem;
+        }
+        .admin-form input,
+        .admin-form textarea,
+        .admin-form select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+        .admin-form input, .admin-form textarea, .admin-form select {
+            border: 1px solid #888;
+            box-sizing: border-box; 
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+            margin-top: 1rem;
+        }
+        .form-actions button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #create-btn { background-color: #28a745; color: white; }
+        #update-btn { background-color: #007bff; color: white; }
+        #delete-btn { background-color: #dc3545; color: white; }
+        #clear-btn { background-color: #6c757d; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html"><i>Homepage</i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Manage Local Projects</h1>
+        <p>Use this form to manage the projects stored in your browser's local storage. Changes will be visible on the homepage after clicking "Load Local".</p>
+        <form id="project-form" class="admin-form">
+            <label for="project-select">Select Project to Edit/Delete:</label>
+            <select id="project-select"><option value="">-- New Project --</option></select>
+            
+            <label for="title">Title:</label><input type="text" id="title" required>
+            <label for="description">Description:</label><textarea id="description" rows="4" required></textarea>
+            <label for="link">Project Link URL:</label><input type="url" id="link" required>
+            <label for="imageUrl">Image URL:</label><input type="url" id="imageUrl" required>
+            
+            <div class="form-actions">
+                <button type="button" id="create-btn">Create</button>
+                <button type="button" id="update-btn">Update</button>
+                <button type="button" id="delete-btn">Delete</button>
+                <button type="button" id="clear-btn">Clear Form</button>
+            </div>
+        </form>
+    </main>
+    <script src="/assets/scripts/admin.js"></script>
+</body>
+</html>
